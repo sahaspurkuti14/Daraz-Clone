@@ -1,0 +1,55 @@
+    const productsData = async() => {
+            const myData = [{
+                        id:111 ,
+                        image:"https://static-01.daraz.com.np/p/d54bab04e7397e4d6a49bf4a3e234374.jpg ",
+                        title:'Crystal Glass Large Size Turtle Tortoise Chinese Feng Shui (8 X 12Cm) Tortoise Turtle Statue Crystal Glass Statue White Clear Lucky Charm For Aquarium',
+                        discountedPrice:255,
+                        markedPrice:500
+                        },
+
+                        {
+                        id:222,
+                        image:"https://static-01.daraz.com.np/p/b6a6837a945ef6dc99a1fa578960e8f6.jpg ",
+                        title:'Lightning to Headphone Jack Adapter Dongle [ MFi Certified ] Earbuds Headphone Converter for Apple iPhone SE/11/Pro/Pro Max/XR/Xs/Xs Max/X/8/8Plus 7/7Plus,Music Control,Calling&Siri Supported',
+                        discountedPrice:1590,
+                        markedPrice:2500
+                        },
+                        
+                        {
+                        id:333,
+                        image:"https://static-01.daraz.com.np/p/c1dc0e5f5a761773b03677e86482f4f5.jpg ",
+                        title:'Hair Removal Hard Wax Beans Hard Body Wax Beans For Facial Arm Legs 100g With 10pcs Wax Spatulas ',
+                        discountedPrice:262,
+                        markedPrice:399
+                        },
+
+                        {
+                        id:444,
+                        image:"https://static-01.daraz.com.np/p/3c22927dccb4c34e2985f3d382421cc1.jpg",
+                        title:'Pvc Rectangle Pastoral Style Waterproof Dining Table Cloths/Waterproof Oil Proof Pvc Dining Table Cloth Cover (137Cm X 183Cm)',
+                        discountedPrice:544,
+                        markedPrice:1500
+                        },
+
+                        {
+                        id:555,
+                        image:"https://static-01.daraz.com.np/p/c35b270fb776d05094c12206ab0ffdd6.jpg_400x400q75.jpg_.webp",
+                        title:'Optical Keyboard and Mouse Kit Suspension Keys and Rainbow Lights Gaming Keyboard USB Wired for Desktop',
+                        discountedPrice:1320,
+                        markedPrice:1499  
+                        },
+
+                        {
+                        id:666,
+                        image:"https://static-01.daraz.com.np/p/38eff84746cd3baadbebcf5dd83a6c7a.jpg_400x400q75.jpg_.webp",
+                        title:'Goldstar Shoes For Men Zed Black ',
+                        discountedPrice:1040,
+                        markedPrice:1199
+                        },
+                        ];
+                        dispatch(setMyProducts(myData));
+    }
+
+    useEffect(() => {
+        productsData();
+    }, )

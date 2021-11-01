@@ -1,0 +1,41 @@
+@import './Variables.scss';
+
+.container{
+    position: relative;
+    background-color: $background;
+    height: 25px;
+    width: 100%;
+    .header{     
+        display: flex;      
+        justify-content: flex-end;
+        gap: 30px;
+        flex-direction: row;
+        word-wrap: normal;
+        flex-wrap: nowrap;
+        padding-right: 160px;
+        width: 89%;
+        .header-item{
+            color: black;
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: 300;
+            font-family: $font;         
+            
+
+            &:hover{
+                color: $daraz-color;
+            }
+            
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 250%;
+        .header{
+            width: fit-content;
+        }
+  }
+}

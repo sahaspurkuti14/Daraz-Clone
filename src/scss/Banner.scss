@@ -1,0 +1,34 @@
+@import './Variables';
+
+.banner{
+    height: 344px;
+    display: flex;   
+    background: rgb(0,14,36);
+    background: linear-gradient(90deg, rgba(0,14,36,1) 0%, rgba(9,49,121,1) 0%, rgba(0,181,255,1) 0%);
+    margin-bottom: 25px;  
+    width: 100%;  
+
+    .banner-img{
+        width: 100%;
+        height: 344px;
+    }
+
+    .categories{
+        height: 344px;
+        width: 200px;
+        margin-left: $ml;
+    }
+    
+    .slider{        
+        width: 1015px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .banner{
+        .categories{
+            margin-left: 0;
+        }
+    }
+}

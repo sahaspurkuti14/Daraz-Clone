@@ -1,0 +1,35 @@
+@import './Variables';
+
+.homepage{
+    
+    .homepage-ad-banner{
+        background-color: #f83e1b;
+        height: 80px;
+        display: flex;    
+    
+        img{            
+            text-align: center;
+            height: 100%;
+            margin-left: $ml;
+            
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            color:white;
+            margin-left: -35px;
+            margin-top: -30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+   .homepage{
+    .homepage-ad-banner{
+        img{
+            margin-left: 0;
+        }
+    }
+  }
+} 

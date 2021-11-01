@@ -1,0 +1,59 @@
+@import './Variables';
+
+
+@mixin list {
+    list-style-type: none;
+        font-family: $font;
+        color: #757575;
+        font-size: 13px;
+        line-height: 12px;
+        text-align: left;
+        padding-left: 10px;
+              
+}
+
+.categories{
+    background-color: white;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .dropdown-items{
+        @include list;         
+            &:hover{
+                    background-color: $background;
+                    color: #3993B1;
+            }
+
+        .submenu{
+            height: 344px;
+            width: 200px;            
+            order: 1;
+            border-radius: 0;
+    
+            
+        }
+
+    }
+}
+
+.dropdown-subitems{
+                @include list;
+                line-height: 28px;
+                &:hover{
+                    background-color: $background;
+                    color: #3993B1;
+                    }
+
+                 .submenu2{
+                    height: 344px;
+                    width: 200px;
+                    border-radius: 0;
+                    order: 2;
+
+    
+                    }   
+
+            }
+

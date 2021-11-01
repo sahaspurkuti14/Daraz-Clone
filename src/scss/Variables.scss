@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$background: rgba(158,158,158,.2);
+$daraz-color: #ff6801;
+$standard-color: #f5f5f5;
+$ml: 150px;
+$mr:150px;
+$font: 'Roboto', sans-serif;
+
+
+@mixin page-margin {
+    margin-left:150px;
+    margin-right:150px;
+    
+}

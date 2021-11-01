@@ -1,0 +1,64 @@
+@import './Variables';
+
+.product{
+    height:290px;
+    width: 188px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    background-color: white;
+    
+    &:hover{
+        box-shadow: 2px 2px 10px -1px rgba(117,117,117,0.75);
+        -webkit-box-shadow: 2px 2px 10px -1px rgba(117,117,117,0.75);
+        -moz-box-shadow: 2px 2px 10px -1px rgba(117,117,117,0.75);
+
+        border-radius: 2px;
+    }
+    
+    .product-image{
+        height: 188px;
+        width: 180px;
+        padding-top: 5px;
+    }
+
+    .product-title{
+        font-family: $font;
+        font-size: 14px;
+        overflow: hidden;
+        line-height: 18px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        margin: 5px;
+        margin-top: 1px;
+        line-height: 18px;
+        height: 36px;
+        color: black;
+        text-decoration: none !important;
+    }
+
+    .discounted-price{
+        color: $daraz-color;
+        font-size: 18px;
+        font-family: $font;
+        margin: 5px;
+        text-decoration: none;
+    }
+
+    .product-price{
+        display: flex;
+        margin: 5px;
+        .marked-price{
+            font-family: $font;
+            font-size: 13px;
+            color: #757575;
+            text-decoration: line-through;
+        }
+        .discount-percent{
+            font-family: $font;
+            font-size: 13px;
+            margin-left: 10px;
+        }
+    }
+}
