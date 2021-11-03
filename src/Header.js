@@ -1,5 +1,7 @@
 import React from 'react';
 import "./scss/Header.scss";
+import Login from './Login';
+import {Link} from 'react-router-dom';
 
 function Header() {
     return (
@@ -9,7 +11,7 @@ function Header() {
                 <div className="header-item"> SELL ON DARAZ</div>
                 <div className="header-item"> CUSTOMER CARE </div>
                 <div className="header-item"> TRACK MY ORDER</div>
-                <div className="header-item"> LOGIN </div>
+                <Link to="/login"><div className="header-item"> LOGIN </div></Link>
                 <div className="header-item"> SIGN UP </div> 
             </div>                     
         </div>

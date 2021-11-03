@@ -21,11 +21,11 @@ function FlashSale() {
                     <div className="timer-unit"> 00 </div>:
                     <div className="timer-unit"> 00 </div>
                 </div>
-             <Link to="/product_detail">   <div className="shopMore">SHOP MORE</div></Link>
+             <div className="shopMore">SHOP MORE</div>
             </div>
 
             <div className="product-container">
-        {products.map(i => (
+        {products.slice(6,12).map(i => (
                     <Products
                     key={i.id}
                         id={i.id}

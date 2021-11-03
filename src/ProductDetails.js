@@ -8,6 +8,7 @@ import {useParams} from 'react-router-dom';
 import axios from 'axios';
 import {useSelector ,useDispatch} from 'react-redux';
 import {selectedProduct} from './redux/action/productActions';
+import MainHeader from './MainHeader';
 
 
 function ProductDetails() {
@@ -55,6 +56,7 @@ function ProductDetails() {
 
     return (
         <>
+        <MainHeader/>
         {Object.keys(product).length === 0 ? (
             <div>...Loading </div>): (
         <div className="product-details">
