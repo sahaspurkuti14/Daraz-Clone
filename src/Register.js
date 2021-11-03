@@ -1,7 +1,8 @@
 import React , {useState } from 'react';
 import {Link , useHistory } from 'react-router-dom';
 import { auth } from './firebase';
-import './scss/Login.scss'
+import './scss/Login.scss';
+import MainHeader from './MainHeader';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -21,6 +22,8 @@ function Login() {
     }
     
     return (
+        <>
+        <MainHeader/>
         <div className="login">
             <div className="title">
                 <div className="login-title"> Create your Daraz Account. </div>
@@ -47,6 +50,7 @@ function Login() {
             </div>
             
         </div>
+        </>
     )
 }
 
