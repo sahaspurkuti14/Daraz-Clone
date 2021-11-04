@@ -43,9 +43,6 @@ function Login() {
                 <div className="column2">
                     <button type="submit" onClick={register} className="normal-login"> SIGN UP</button>
                     <span>By clicking “SIGN UP”, I agree to Daraz's Terms of Use and Privacy Policy </span>
-                    <span>Or,sign up with </span>
-                    <button className="facebook-login">Facebook</button>
-                    <button className="google-login">Google</button>
                 </div>
             </div>
             

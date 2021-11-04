@@ -4,7 +4,10 @@ import { auth } from './firebase';
 import './scss/Login.scss';
 import MainHeader from './MainHeader';
 import { GoogleLogin } from 'react-google-login';
-import { GoogleLogout } from 'react-google-login';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import {BsFacebook} from 'react-icons/bs';
+import {AiFillGooglePlusCircle} from 'react-icons/ai';
+
 
 
 function Login() {
@@ -35,9 +38,9 @@ function Login() {
         console.log('[Login Failed] error:', response);
         }
 
-    const logout = () => {
-        alert("logout successful");
-    }
+    const responseFacebook = (response) => {
+  console.log(response);
+}
 
     
     return (
@@ -62,26 +65,31 @@ function Login() {
                 <div className="column2">
                     <button type="submit" onClick={signIn} className="normal-login"> LOGIN </button>
                     <span>Or,login with</span>
-                    <button className="facebook-login">Facebook</button>
+                
+                    <FacebookLogin
+                        appId="199942538951482"
+                        autoLoad
+                        callback={responseFacebook}
+                        render={renderProps => (
+                            <button onClick={renderProps.onClick} className="facebook-login">
+                                <BsFacebook className="facebook-icon"/>Facebook
+                            </button>
+                        )}
+                    />
                     
                     <GoogleLogin
                     clientId="658891278066-og9pe2u30fptm6dlbguvnl4b0kdk2a6u.apps.googleusercontent.com"
                     render={renderProps => (
-                    <button className="google-login" onClick={renderProps.onClick} disabled={renderProps.disabled}>Google</button>
+                    <button className="google-login" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                        <AiFillGooglePlusCircle className="google-icon"/>Google
+                    </button>
                     )}  
                     buttonText="Login"
                     onSuccess={responseSuccess}
                     onFailure={responseFailure}
-                    cookiePolicy={'single_host_origin'}
-                                      
+                    cookiePolicy={'single_host_origin'}                                      
                 />
                 </div>
-                
-                <GoogleLogout
-      clientId="658891278066-og9pe2u30fptm6dlbguvnl4b0kdk2a6u.apps.googleusercontent.com"
-      buttonText="Logout"
-      onLogoutSuccess={logout}
-    />
             </div>
 
         </div>
