@@ -54,6 +54,7 @@
                     width: 350px;
                     margin-bottom: 10px;
                     border: 1px solid lightgray;
+                    padding-left: 10px;
                 }
             }
         }
@@ -69,6 +70,7 @@
                 border: none;
                 font-size: 14px;
                 color: white;
+                text-align: center;
             }
             .normal-login{
                 background-color: $daraz-color;
@@ -86,8 +88,8 @@
             }
             .google-login{
                 background-color: #de5246 ;
+                text-align: center;
             }
-            
         }
     }
 }

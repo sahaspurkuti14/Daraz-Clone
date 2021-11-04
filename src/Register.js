@@ -33,10 +33,10 @@ function Login() {
                 <div className="column1">
                     <form>
                         <div className="input-title"> Email* </div>
-                        <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                        <input type="text" placeholder="Please enter your Email" value={email} onChange={e => setEmail(e.target.value)} />
 
                         <div className="input-title"> Password* </div>   
-                        <input type="password"  value={password} onChange={e => setPassword(e.target.value)} />
+                        <input type="password" placeholder="Please enter your password" value={password} onChange={e => setPassword(e.target.value)} />
                         
                     </form>
                 </div>
