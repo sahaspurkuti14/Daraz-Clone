@@ -1,13 +1,10 @@
-import React , {useState , useEffect} from 'react';
-import {useSelector , useDispatch} from 'react-redux';
+import React from 'react';
+import {useSelector} from 'react-redux';
 import './scss/FlashSale.scss';
 import Products from './Products';
-import {Link} from 'react-router-dom';
-import {setProducts} from './redux/action/productActions';
-import axios from 'axios';
+// import {Link} from 'react-router-dom';
 
 function FlashSale() {
-    const dispatch = useDispatch();
    const products = useSelector(state => state.allProducts.products);
 
     return (

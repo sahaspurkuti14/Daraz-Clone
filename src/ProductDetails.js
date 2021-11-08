@@ -49,7 +49,7 @@ function ProductDetails() {
         if(productId && productId!=="")
         fetchProductDetail();
         
-    }, [productId]);
+    },);
 
     
 

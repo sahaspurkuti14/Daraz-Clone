@@ -1,5 +1,6 @@
-import React , {useState } from 'react';
+import React , {useState , useEffect } from 'react';
 import {Link , useHistory } from 'react-router-dom';
+import {useSelector , useDispatch} from 'react-redux';
 import { auth } from './firebase';
 import './scss/Login.scss';
 import MainHeader from './MainHeader';
@@ -7,13 +8,16 @@ import { GoogleLogin } from 'react-google-login';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import {BsFacebook} from 'react-icons/bs';
 import {AiFillGooglePlusCircle} from 'react-icons/ai';
-
+import {setUser} from './redux/action/userActions';
 
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const history = useHistory();
+
+    const user = useSelector(state => state.users.user);
+    const dispatch = useDispatch();
 
     const signIn = e => {
         e.preventDefault();
@@ -22,6 +26,8 @@ function Login() {
         .then((auth) => {
             if(auth){
                 history.push('/');
+                alert("success");
+                dispatch(setUser(auth));
             }
         })
         .catch(error => alert(error.message))
@@ -29,9 +35,10 @@ function Login() {
     }
     console.log(auth);
 
+    
     const responseSuccess = (response) => {
-        console.log('[Login Success] current user:', response.profileObj);
-        alert("hello"+response.profileObj.name)
+        history.push('/');
+        dispatch(setUser(response.profileObj))
         }
 
     const responseFailure = (response) => {
@@ -39,8 +46,10 @@ function Login() {
         }
 
     const responseFacebook = (response) => {
-  console.log(response);
-}
+        alert("successfully logged in");
+        dispatch(setUser(response));
+        }
+
 
     
     return (
