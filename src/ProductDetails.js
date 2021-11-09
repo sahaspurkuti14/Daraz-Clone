@@ -54,7 +54,6 @@ function ProductDetails() {
 
     const addToCart = () =>{
         dispatch(setAddToCart(product));
-        alert("product added");
     }
 
 

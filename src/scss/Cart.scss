@@ -5,29 +5,30 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    // .no-items{
-    //     padding-top: 140px;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;   
-    //     align-items: center;     
-    //     .text{
-    //         color: #757575;
-    //         font-size: 14px;
-    //         line-height: 18px;
-    //         margin-bottom: 27px;
-    //     }
-    //     button{
-    //         height: 50px;
-    //         width: 200px;
-    //         color: $daraz-color;
-    //         border: 1px solid $daraz-color;
-    //         background-color: transparent;
-    //         &:hover{
-    //             background-color: rgb(250, 236, 218);
-    //         }
-    //     }
-    // }
+    .no-items{
+        padding-top: 140px;
+        padding-bottom: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+        align-items: center;     
+        .text{
+            color: #757575;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 27px;
+        }
+        button{
+            height: 50px;
+            width: 200px;
+            color: $daraz-color;
+            border: 1px solid $daraz-color;
+            background-color: transparent;
+            &:hover{
+                background-color: rgb(250, 236, 218);
+            }
+        }
+    }
 
     .cart-section{
         display: flex;
