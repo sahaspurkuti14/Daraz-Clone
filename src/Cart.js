@@ -7,9 +7,11 @@ import CartItems from './CartItems';
 
 function Cart() {
     const user = useSelector(state => state.users.user);
-    return (
+    const cartItem = useSelector(state => state.addCart.cart);
+    return (        
         <>
         <MainHeader/>
+        {console.log(cartItem)}
         <div className="cart">
             {/* <div className="no-items">            
                 <div className="text">There are no items in this cart</div>
@@ -21,8 +23,17 @@ function Cart() {
                         <div className="checkbox-side"><input type="checkbox"/> SELECT ALL (2 ITEM(S))</div>
                         <button className="delete-btn"><DeleteOutlineIcon/> DELETE </button>
                     </div>
-                    <div className="cart-items">
-                        <CartItems/>
+                    <div className="cart-items-display">
+                        {cartItem?.map(item => (
+                            <CartItems
+                            key={item.id}
+                                id={item.id}
+                                image= {item.image}
+                                title= {item.title}
+                                discountedPrice={item.price +500}
+                                markedPrice = {item.price + 1000 }
+                                />
+                        ))}
                     </div>
             </div>
 

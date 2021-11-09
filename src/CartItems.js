@@ -3,8 +3,9 @@ import './scss/CartItems.scss';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
-function CartItems() {
+function CartItems({id , image , title , discountedPrice, markedPrice}) {
     let [count , setCount] = useState(1);
+    let discountPercent = (markedPrice - discountedPrice)/markedPrice * 100;
     
     let increment = () => {
         setCount(count + 1);
@@ -17,17 +18,17 @@ function CartItems() {
         <div className="cart-items">
             <div className="product-details">
                 <input type="checkbox"/>
-                <img className="product-img" src="https://static-01.daraz.com.np/p/18ad4139181cda6ac9627e3c7024847d.jpg" alt="img"/>
+                <img className="product-img" src={image} alt="img"/>
                 <div className="title-brand">
-                    <div className="product-title">Foldable and Portable Multi-Purpose Laptop Table Stand/Study Table/Bed Table/Ergonomic & Rounded Edges/Non-Slip Legs/Engineered Wood/Color </div>
+                    <div className="product-title">{title}</div>
                     <div className="brand-and-others">No Brand, Color Family:Black </div>
                 </div>
             </div>
 
             <div className="price-section">
-                <div className="discounted-price">Rs. 856 </div>
-                <div className="marked-price">Rs. 1500 </div>
-                <div className="discount-percent">-43% </div>
+                <div className="discounted-price">{discountedPrice}</div>
+                <div className="marked-price">{markedPrice}</div>
+                <div className="discount-percent">-{discountPercent.toFixed(2)}% </div>
                 <div className="wishlist-and-delete">
                     <FavoriteBorderIcon className="wishlist-icon"/>
                     <DeleteOutlineIcon className="delete-icon"/>

@@ -13,12 +13,12 @@ function Header() {
     }
     return (
         <div className="container">  
-            <div className ="header">    
+            <div className ="header">   
                 <div className="header-item" style={{color:"#ff6801"}}> SAVE MORE ON APP </div>
                 <div className="header-item"> SELL ON DARAZ</div>
                 <div className="header-item"> CUSTOMER CARE </div>
                 <div className="header-item"> TRACK MY ORDER</div>
-                {user?
+                {/* {user?
                     <>
                     <div className="header-item"> {user.name} 's Account</div>
                     <GoogleLogout
@@ -31,11 +31,11 @@ function Header() {
                         /> 
                     </>
                 :
-                <>
-                <Link to="/login"><div className="header-item"> LOGIN </div></Link>
-                <Link to="/register"><div className="header-item"> SIGN UP </div></Link> 
-                </>
-                }
+                <> */}
+                <Link to="/login" style={{ textDecoration: 'none' }}><div className="header-item"> LOGIN </div></Link>
+                <Link to="/register" style={{ textDecoration: 'none' }}><div className="header-item"> SIGN UP </div></Link> 
+                {/* </>
+                } */}
             </div>                     
         </div>
     )

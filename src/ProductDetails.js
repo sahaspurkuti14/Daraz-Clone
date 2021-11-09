@@ -9,6 +9,7 @@ import axios from 'axios';
 import {useSelector ,useDispatch} from 'react-redux';
 import {selectedProduct} from './redux/action/productActions';
 import MainHeader from './MainHeader';
+import {setAddToCart} from './redux/action/cartActions';
 
 
 function ProductDetails() {
@@ -51,13 +52,19 @@ function ProductDetails() {
         
     },);
 
+    const addToCart = () =>{
+        dispatch(setAddToCart(product));
+        alert("product added");
+    }
+
+
     
 
 
     return (
         <>
         <MainHeader/>
-        {Object.keys(product).length === 0 ? (
+        {Object.keys(product)?.length === 0 ? (
             <div>...Loading </div>): (
         <div className="product-details">
             <div className="main-container">
@@ -109,7 +116,7 @@ function ProductDetails() {
 
                         <div className="buy-cart-section">
                             <div className="buynow">Buy Now</div>
-                            <div className="addtocart">Add to Cart</div>
+                            <button className="addtocart" onClick={addToCart}>Add to Cart</button>
                         </div>
                     </div>
                 </div>

@@ -36,29 +36,29 @@ useEffect(() => {
             <div className="recommendation-title">Just For You </div>
             <div className="products-section">
                 <>
-                    {Object.keys(products).length === 0 ? (
+                    {Object.keys(products)?.length === 0 ? (
                         <div>...Loading </div>): (
                             <>
                                 {!showLess ? 
-                                <> {products.slice(0,12).map(i => (
+                                <> {products?.slice(0,12).map(item => (
                                         <Products
-                                        key={i.id}
-                                            id={i.id}
-                                            image= {i.image}
-                                            title= {i.title}
-                                            discountedPrice={i.price * 10}
-                                            markedPrice = {i.price + 500}
+                                        key={item.id}
+                                            id={item.id}
+                                            image= {item.image}
+                                            title= {item.title}
+                                            discountedPrice={item.price + 500}
+                                            markedPrice = {item.price + 1000}
                                             />
                                     ))} 
                                 </>
                                 : 
-                                <> {products.map(i => (
+                                <> {products?.map(item => (
                                     <Products
-                                    key={i.id}
-                                    id={i.id}
-                                    image= {i.image}
-                                    title= {i.title}
-                                    discountedPrice={i.price}
+                                    key={item.id}
+                                    id={item.id}
+                                    image= {item.image}
+                                    title= {item.title}
+                                    discountedPrice={item.price}
                                     />
                                     ))}
                                 </>}

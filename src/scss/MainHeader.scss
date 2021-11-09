@@ -38,12 +38,24 @@
         
     }
 
-    .cart-icon{
-        height: 30px;
-        width: 30px;
-        margin-right: 40px;
-        margin-top: 7px;
-    }
+    .cart{
+        .cart-icon{
+            height: 30px;
+            width: 30px;
+            margin-right: 40px;
+            margin-top: 7px;
+            } 
+        .cart-count{
+            border: 1px solid $daraz-color;
+            height: 20px;
+            width: 20px;
+            background-color: $daraz-color;
+            color: white;
+            border-radius: 50%;
+            margin-left: -50px;
+            margin-right: 20px;
+        }
+    }    
 
     .last-ad{
         width: 188px;

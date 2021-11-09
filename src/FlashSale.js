@@ -18,17 +18,17 @@ function FlashSale() {
                     <div className="timer-unit"> 00 </div>:
                     <div className="timer-unit"> 00 </div>
                 </div>
-             <div className="shopMore">SHOP MORE</div>
             </div>
 
             <div className="product-container">
-        {products.slice(6,12).map(i => (
+        {products?.slice(6,12).map(item => (
                     <Products
-                    key={i.id}
-                        id={i.id}
-                        image= {i.image}
-                        title= {i.title}
-                        discountedPrice={i.price}
+                    key={item.id}
+                        id={item.id}
+                        image= {item.image}
+                        title= {item.title}
+                        discountedPrice={item.price +500}
+                        markedPrice = {item.price + 1000 }
                         />
                 ))}
             </div>

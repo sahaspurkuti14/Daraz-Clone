@@ -8,7 +8,7 @@ function Products( {id , image , title , discountedPrice, markedPrice}) {
 
 
     return (
-        <Link to={`/product_detail/${id}`}>
+        <Link to={`/product_detail/${id}`} style={{ textDecoration: 'none' }}>
         <div className="product">
             <img className="product-image" src= {image} alt="img"/>
             <div className="product-title"> {title} </div>
